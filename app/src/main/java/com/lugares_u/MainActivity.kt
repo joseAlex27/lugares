@@ -59,7 +59,29 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun haceLogin() {
-        TODO("Not yet implemented")
+        val correo = binding.etCorreo.text.toString()
+        val clave = binding.etClave.text.toString()
+
+        auth.signInWithEmailAndPassword(correo, clave)
+            .addOnCompleteListener { task ->
+                if(task.isSuccessful){
+                    // Sign in success, update UI with the signed-in user's information
+                    val user = auth.currentUser
+                    refresca(user)
+                }else {
+                    // If sign in fails, display a message to the user.
+                    Toast.makeText(baseContext, "Authentication failed.",
+                        Toast.LENGTH_SHORT).show()
+                    refresca(null)
+                }
+            }
+    }
+
+    //Esto hará que una vez autenticado.. no pida mas login a menos que cierre sesion
+    public override fun onStart(){
+        super.onStart()
+        val usuario = auth.currentUser
+        refresca(usuario)
     }
 
 
