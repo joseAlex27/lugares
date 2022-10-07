@@ -5,7 +5,7 @@ import com.lugares_u.data.LugarDao
 import com.lugares_u.model.Lugar
 
 class LugarRepository(private val lugarDao: LugarDao) {
-    val getAllData: LiveData<List<Lugar>> = lugarDao.getAllData()
+    val getLugares : LiveData<List<Lugar>> = lugarDao.getLugares()
 
     suspend fun addLugar(lugar: Lugar) {
         lugarDao.addLugar(lugar)

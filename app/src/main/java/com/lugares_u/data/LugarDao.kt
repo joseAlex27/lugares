@@ -12,7 +12,7 @@ import com.lugares_u.model.Lugar
 interface LugarDao {
 
     @Query("SELECT * FROM LUGAR")
-    fun getAllData() : LiveData<List<Lugar>>
+    fun getLugares() : LiveData<List<Lugar>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addLugar(lugar: Lugar)

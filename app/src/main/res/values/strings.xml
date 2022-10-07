@@ -14,4 +14,13 @@
     <string name="menu_lugar">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="msg_nombre">Nombre del Lugar</string>
+    <string name="msg_correo">Correo (correo@xxxx.xxx)</string>
+    <string name="msg_telefono">Télefono (9999-9999)</string>
+    <string name="msg_web">Sitio Web</string>
+    <string name="bt_addLugar">Agregar</string>
+    <string name="msg_lugar_added">Lugar Agregado</string>
+    <string name="msg_data">Faltan datos!!</string>
 </resources>

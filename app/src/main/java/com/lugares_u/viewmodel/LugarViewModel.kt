@@ -9,14 +9,14 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class LugarViewModel(application: Application) : AndroidViewModel(application) {
-    val getAllData: LiveData<List<Lugar>>
+    val getLugares: LiveData<List<Lugar>>
 
     private val repository: LugarRepository
 
     init {
         val lugarDao = LugarDatabase.getDatabase(application).lugarDao()
         repository = LugarRepository(lugarDao)
-        getAllData = repository.getAllData
+        getLugares = repository.getLugares
     }
 
     fun addLugar (lugar: Lugar) {
